@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    // 1 rem = 10px; 10px/16px  =  62.5%
+    // this defines what is 1rem is ....
+    //     -phone   600px
+    // -tab-port 900px
+    // -tab-land 1200px
+    // -big-desktop 1800px
+    //this code for writing media queries for device directly 
+    // @media (max-width: 600px) {
+    //     font-size: 50%;
+    // }
+    //this code for writing media queries using sass mixin's
+    // @include respond-phone {
+    //     font-size: 50%;
+    // 
+    // }
+    // added test code
+    // ORDER: Base+typography>general layout + grid > page layout > components
+    @include respond(tab-land) {
+        // width 1200  ?
+        font-size: 56.25%; // 1em = 9px; 9/16px = 56.25%;
+    }
+    @include respond(tab-port) {
+        // width < 900 ?
+        font-size: 50%; // 1em = 8px; 8/16px = 50%;
+    }
+    @include respond(phone) {
+        // width < 600 ?
+        font-size: 30%; // 1em = 4.8px; 8/16px = 50%;
+    }
+    @include respond(big-desktop) {
+        font-size: 75%; // 1em = 12px; 12/16px = 75%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+    @include respond(tab-port) {
+        // width < 900 ?
+        padding: 0;
+    }
+}
