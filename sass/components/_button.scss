@@ -12,7 +12,8 @@
         cursor: pointer;
     }
     &--white {
-        background-color: $color-white;
+        background-color: tomato;
+      //  background-color: $color-white;
         color: $color-gray-dark;
         padding: 1.5rem 3rem;
         display: inline-block;
