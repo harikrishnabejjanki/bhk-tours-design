@@ -234,7 +234,7 @@ body {
   cursor: pointer; }
 
 .btn--white {
-  background-color: #fff;
+  background-color: darkblue;
   color: #777;
   padding: 1.5rem 3rem;
   display: inline-block; }
